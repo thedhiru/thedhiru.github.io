@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Dropp</title>
+<meta name="description" content="Get in touch with Dropp, find stockists near you, or read answers to common questions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,380;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo">Dr<em>o</em>pp<sup>™</sup></a>
+    <nav class="main-nav" id="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="sustainability.html">Sustainability</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a href="#contact-form" class="btn btn-primary">Send a message</a>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-head">
+    <div class="wrap">
+      <span class="eyebrow">Get in touch</span>
+      <h1>Talk to Dropp.</h1>
+      <p>Questions about stockists, wholesale, home delivery, office supply, or press — this is where they all start.</p>
+    </div>
+  </section>
+
+  <!-- FORM + INFO -->
+  <section class="section" style="padding-top:0;">
+    <div class="wrap grid-2" style="align-items:flex-start;">
+
+      <form id="contact-form">
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="subject">What's this about</label>
+          <select id="subject" name="subject">
+            <option>General question</option>
+            <option>Where to buy</option>
+            <option>Wholesale / stocking</option>
+            <option>Refill program</option>
+            <option>Press</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell us what you need..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send message</button>
+        <p id="form-note" style="margin-top:14px; font-size:0.88rem; color:var(--ink-soft);"></p>
+      </form>
+
+      <div>
+        <div class="pillar" style="margin-bottom:20px;">
+          <h3>General inquiries</h3>
+          <p style="margin-top:8px;">info@droppwater.com<br>+91 12345 67890</p>
+        </div>
+        <div class="pillar" style="margin-bottom:20px;">
+          <h3>Wholesale &amp; stocking</h3>
+          <p style="margin-top:8px;">wholesale@droppwater.com<br>Response within 2 business days</p>
+        </div>
+        <div class="pillar">
+          <h3>Head office</h3>
+          <p style="margin-top:8px;">Dropp Water Private Limited<br>Sector 10, Noida,<br>Uttar Pradesh — 201301, India</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="section-divider">
+    <svg class="contour" viewBox="0 0 1200 50" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,26 C150,4 300,46 450,24 C600,2 750,42 900,22 C1050,2 1150,32 1200,16"/>
+    </svg>
+  </div>
+
+  <!-- LOCATIONS -->
+  <section class="section alt">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Where to find us</span>
+        <h2>Stockists near you.</h2>
+        <p>A sample of where Dropp is currently on shelf — the full list is longer and growing every quarter.</p>
+      </div>
+      <ul class="locations-list">
+        <li class="loc-item">
+          <div><h4>Foodhall — Indiranagar, Bengaluru</h4><p>Full range, 500 ml / 1 L / 2 L</p></div>
+          <span class="dist">1.2 km</span>
+        </li>
+        <li class="loc-item">
+          <div><h4>Nature's Basket — Bandra, Mumbai</h4><p>Still and Sparkling, 500ml &amp; 1L</p></div>
+          <span class="dist">In stock</span>
+        </li>
+        <li class="loc-item">
+          <div><h4>Cafe Noir — Connaught Place, Delhi</h4><p>Served on tap from a refill jug</p></div>
+          <span class="dist">In stock</span>
+        </li>
+        <li class="loc-item">
+          <div><h4>Le Marché — Koregaon Park, Pune</h4><p>Full range, case orders available</p></div>
+          <span class="dist">In stock</span>
+        </li>
+        <li class="loc-item">
+          <div><h4>WeWork Galaxy — Residency Road, Bengaluru</h4><p>Office refill program partner</p></div>
+          <span class="dist">Refill site</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Common questions</span>
+        <h2>Before you write in.</h2>
+      </div>
+
+      <details class="accordion-item" open>
+        <summary>How is Dropp purified?<span class="plus">+</span></summary>
+        <div class="panel">Every batch goes through four stages in order: ground water draw, reverse osmosis, ultraviolet sterilisation, and ozonation. The result is bottled on the same line under hygienic conditions.</div>
+      </details>
+      <details class="accordion-item">
+        <summary>Is Dropp BIS and FSSAI certified?<span class="plus">+</span></summary>
+        <div class="panel">Yes. Dropp is tested as per BIS standards (IS 14543) and bottled under FSSAI licence 12723999000123. Test reports for any batch in circulation are available on request through the contact form.</div>
+      </details>
+      <details class="accordion-item">
+        <summary>Do you offer wholesale pricing for cafés and offices?<span class="plus">+</span></summary>
+        <div class="panel">Yes — case and bulk pricing scale with volume. Reach out via the wholesale email above with your expected monthly volume and your city, and our team will send a rate card within two business days.</div>
+      </details>
+      <details class="accordion-item">
+        <summary>Which sizes are available?<span class="plus">+</span></summary>
+        <div class="panel">Dropp ships in five sizes: 200 ml, 500 ml, 1 L, 2 L, and a returnable 20 L office jar. All sizes use the same source and the same purification sequence. See the Products page for the full list.</div>
+      </details>
+      <details class="accordion-item">
+        <summary>Can I recycle the bottle through normal municipal collection?<span class="plus">+</span></summary>
+        <div class="panel">Yes — the bottle, cap, and label are all designed to go through standard PET recycling streams without special handling. The 20 L jar is returnable and is collected on the next delivery.</div>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot-top">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="index.html" class="logo">Dr<em>o</em>pp<sup>™</sup></a>
+        <p>Packaged drinking water sourced from the finest natural ground water, purified through RO + UV + Ozonation, and bottled to BIS standards. Pure water. Pure trust.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Site</h5>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="sustainability.html">Sustainability</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h5>Source</h5>
+        <a href="about.html">Origin point</a>
+        <a href="sustainability.html">Bottle material</a>
+        <a href="sustainability.html">Refill program</a>
+        <a href="contact.html">Where to buy</a>
+      </div>
+      <div class="foot-col">
+        <h5>Connect</h5>
+        <a href="#">www.droppwater.com</a>
+        <a href="#">@droppwater</a>
+        <a href="contact.html">+91 12345 67890</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© <span data-year></span> Dropp Water Private Limited</span>
+    <div class="legal-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
