@@ -57,6 +57,22 @@ document.addEventListener('DOMContentLoaded', () => {
     slider.addEventListener('mouseenter', stop);
     slider.addEventListener('mouseleave', start);
 
+    // swipe support (mobile)
+    let touchStartX = 0;
+    let touchEndX = 0;
+    slider.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+      stop();
+    }, { passive: true });
+    slider.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const dx = touchEndX - touchStartX;
+      if (Math.abs(dx) > 40){
+        go(dx < 0 ? i + 1 : i - 1);
+      }
+      start();
+    }, { passive: true });
+
     start();
   }
 });
