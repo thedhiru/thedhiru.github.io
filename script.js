@@ -64,6 +64,14 @@ document.addEventListener('DOMContentLoaded', () => {
       i = (n + slides.length) % slides.length;
       slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
       dots.forEach((d, idx) => d.classList.toggle('active', idx === i));
+      // pause/play video on the video slide
+      slides.forEach((s, idx) => {
+        const v = s.querySelector('video');
+        if (v){
+          if (idx === i) v.play().catch(()=>{});
+          else { v.pause(); v.currentTime = 0; }
+        }
+      });
     };
 
     const start = () => { stop(); timer = setInterval(() => go(i + 1), 6500); };
