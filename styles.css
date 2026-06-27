@@ -177,20 +177,26 @@ nav.main-nav a.active::after{
   border:1px solid var(--line);
   border-radius:50%;
   width:42px; height:42px;
+  min-width:42px; min-height:42px;
   align-items:center;
   justify-content:center;
   cursor:pointer;
+  padding:0;
+  position:relative;
+  z-index:60;
+  flex-shrink:0;
 }
 .menu-toggle span, .menu-toggle span::before, .menu-toggle span::after{
   content:"";
   display:block;
-  width:16px; height:1.5px;
+  width:18px; height:2px;
   background:var(--ink);
   position:relative;
   transition:transform .25s ease, opacity .25s ease;
+  border-radius:2px;
 }
-.menu-toggle span::before{ position:absolute; top:-5px; }
-.menu-toggle span::after{ position:absolute; top:5px; }
+.menu-toggle span::before{ position:absolute; top:-6px; left:0; }
+.menu-toggle span::after{ position:absolute; top:6px; left:0; }
 
 /* ---------- buttons ---------- */
 .btn{
@@ -808,6 +814,36 @@ nav.main-nav a.active::after{
   .logo img{ height:80px; max-width:200px; }
   .foot-brand .logo img{ height:110px; max-width:280px; }
 
+  .menu-toggle{ display:flex !important; width:44px; height:44px; min-width:44px; min-height:44px; }
+
+  nav.main-nav{
+    position:fixed;
+    top:104px; left:0; right:0;
+    max-height:calc(100vh - 104px);
+    background:var(--bg);
+    transform:translateY(-110%);
+    transition:transform .35s ease, visibility .35s;
+    padding:24px var(--pad);
+    border-top:1px solid var(--line);
+    overflow-y:auto;
+    z-index:55;
+    visibility:hidden;
+    pointer-events:none;
+  }
+  nav.main-nav.open{
+    transform:translateY(0);
+    visibility:visible;
+    pointer-events:auto;
+  }
+  nav.main-nav ul{ flex-direction:column; gap:0; }
+  nav.main-nav a{
+    display:block;
+    padding:14px 0;
+    font-size:1.05rem;
+    border-bottom:1px solid var(--line-soft);
+  }
+  .header-actions .btn{ display:none; }
+
   .hero-slider{ min-height:560px; }
   .hero-slider .slide-inner{
     grid-template-columns:1fr;
@@ -853,18 +889,27 @@ nav.main-nav a.active::after{
   .logo img{ height:64px; max-width:160px; }
   .foot-brand .logo img{ height:96px; max-width:240px; }
 
-  .menu-toggle{ display:flex; width:44px; height:44px; }
+  .menu-toggle{ display:flex !important; width:44px; height:44px; min-width:44px; min-height:44px; }
 
   nav.main-nav{
-    position:fixed; inset:88px 0 0 0;
+    position:fixed;
+    top:88px; left:0; right:0;
+    max-height:calc(100vh - 88px);
     background:var(--bg);
     transform:translateY(-110%);
-    transition:transform .3s ease;
+    transition:transform .35s ease, visibility .35s;
     padding:20px var(--pad);
     border-top:1px solid var(--line);
     overflow-y:auto;
+    z-index:55;
+    visibility:hidden;
+    pointer-events:none;
   }
-  nav.main-nav.open{ transform:translateY(0); }
+  nav.main-nav.open{
+    transform:translateY(0);
+    visibility:visible;
+    pointer-events:auto;
+  }
   nav.main-nav ul{ flex-direction:column; gap:0; }
   nav.main-nav a{
     display:block;

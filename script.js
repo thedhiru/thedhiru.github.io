@@ -4,12 +4,31 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.main-nav');
   if (toggle && nav){
-    toggle.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
+    const setOpen = (open) => {
+      nav.classList.toggle('open', open);
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+
+    toggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      setOpen(!nav.classList.contains('open'));
     });
+
     nav.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => nav.classList.remove('open'));
+      a.addEventListener('click', () => setOpen(false));
+    });
+
+    // close on outside tap
+    document.addEventListener('click', (e) => {
+      if (!nav.contains(e.target) && !toggle.contains(e.target)){
+        setOpen(false);
+      }
+    });
+
+    // close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') setOpen(false);
     });
   }
 
